@@ -799,33 +799,16 @@ footer {
 }
 
 
- .experience-page {
-    max-width: 900px;          /* content width control */
-    margin: 0 auto;            /* center horizontally */
-    padding: 60px 24px;
+.experience-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 80px;   /* left-right space */
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 50px;
 }
 
-.experience-card {
-    background: #1f2937;
-    padding: 32px 36px;
-    border-radius: 14px;
-    margin-bottom: 40px;
-}
-
-.experience-card h2,
-.experience-card h4 {
-    text-align: left;
-}
-
-.experience-card ul {
-    padding-left: 22px;
-    line-height: 1.7;
-}
 
 
 
