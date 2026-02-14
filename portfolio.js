@@ -105,28 +105,24 @@ const modal = document.getElementById("thankyou-modal");
 const okBtn = document.getElementById("thankyou-ok");
 
 if (form) {
-    form.addEventListener("submit", async e => {
-        e.preventDefault(); // 🚫 redirect STOP
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
         const formData = new FormData(form);
 
-        try {
-            const res = await fetch(form.action, {
-                method: "POST",
-                body: formData,
-                headers: { "Accept": "application/json" }
-            });
+        const res = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        });
 
-            if (res.ok) {
-                form.reset();
-                modal.style.display = "flex";
+        if (res.ok) {
+            form.reset();
+            modal.style.display = "flex";
 
-                setTimeout(() => {
-                    modal.style.display = "none";
-                }, 2000);
-            }
-        } catch (err) {
-            console.error("Form error:", err);
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 2000);
         }
     });
 }
@@ -134,6 +130,7 @@ if (form) {
 okBtn.addEventListener("click", () => {
     modal.style.display = "none";
 });
+;
 
 
 
