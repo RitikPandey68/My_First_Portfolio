@@ -769,4 +769,35 @@ footer {
     .about-content {
         flex-direction: column;
     }
+
+    .thankyou-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.thankyou-box {
+    background: #0f172a;
+    color: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 380px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.thankyou-box h3 {
+    margin-bottom: 0.5rem;
+}
+
+.thankyou-box p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
 }
