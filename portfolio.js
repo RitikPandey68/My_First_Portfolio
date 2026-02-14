@@ -127,3 +127,61 @@ window.addEventListener("scroll", fadeInOnScroll);
 fadeInOnScroll();
 
 
+
+const form = document.querySelector(".contact-form");
+const modal = document.getElementById("thankyou-modal");
+const okBtn = document.getElementById("thankyou-ok");
+
+if (form) {
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // 🔥 redirect stop
+
+        const formData = new FormData(form);
+
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+            form.reset();
+            modal.style.display = "flex";
+
+            // auto hide after 2 seconds
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 2000);
+        }
+    });
+}
+
+// OK button close
+okBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+
+const form = document.querySelector(".contact-form");
+const successMsg = document.getElementById("form-success");
+
+form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const action = form.getAttribute("action");
+
+    const response = await fetch(action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+        form.reset();
+        successMsg.style.display = "block";
+    }
+});
+
+
+
