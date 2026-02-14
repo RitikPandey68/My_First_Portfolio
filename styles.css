@@ -883,32 +883,11 @@ footer {
 }
 
 
-/* ================= EXPERIENCE FIX ================= */
-
-.experience {
-    width: 100%;
-    background: #0f172a;
-    padding: 100px 0;
-}
-
-.experience-wrapper {
-    max-width: 900px;      /* 🔥 THIS IS THE KEY */
-    margin: 0 auto;        /* 🔥 CENTER FIX */
-    padding: 0 32px;
-}
-
-.experience-card {
-    background: #1e293b;
-    border-radius: 16px;
-    padding: 36px;
-    margin-bottom: 48px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
 
 /* FORCE TEXT ALIGN */
 .experience,
 .experience * {
-    text-align: left;
+    text-align: right;
 }
 
 
