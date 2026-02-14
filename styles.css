@@ -799,4 +799,40 @@ footer {
 }
 
 
+    .experience {
+    padding: 80px 10%;
+}
+
+.experience-card {
+    background: #111827;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.experience-card h3 {
+    color: #3b82f6;
+}
+
+.experience-card h4 {
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.experience-card .duration {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.experience-card ul {
+    margin-left: 20px;
+}
+
+.experience-card li {
+    margin-bottom: 10px;
+}
+
+
+
 }
