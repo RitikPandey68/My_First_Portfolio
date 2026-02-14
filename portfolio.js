@@ -1,24 +1,3 @@
-const form = document.querySelector(".contact-form");
-const successMsg = document.getElementById("form-success");
-
-form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const action = form.getAttribute("action");
-
-    const response = await fetch(action, {
-        method: "POST",
-        body: formData,
-        headers: { "Accept": "application/json" }
-    });
-
-    if (response.ok) {
-        form.reset();
-        successMsg.style.display = "block";
-    }
-});
-
 
 
 // Navigation animation with terminal effect
