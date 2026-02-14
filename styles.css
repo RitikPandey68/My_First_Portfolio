@@ -770,34 +770,38 @@ footer {
         flex-direction: column;
     }
 
-    .thankyou-modal {
+    /* THANK YOU POPUP */
+.thankyou-modal {
     position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;               /* 👈 default hidden */
     align-items: center;
     justify-content: center;
-    z-index: 2000;
+    z-index: 9999;
 }
 
 .thankyou-box {
-    background: #0f172a;
-    color: #fff;
-    padding: 2rem 2.5rem;
-    border-radius: 12px;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
     text-align: center;
-    max-width: 380px;
+    max-width: 400px;
     width: 90%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 
 .thankyou-box h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
+    color: #222;
 }
 
 .thankyou-box p {
-    margin-bottom: 1.5rem;
-    opacity: 0.9;
+    margin-bottom: 20px;
+    color: #555;
 }
 
 }
