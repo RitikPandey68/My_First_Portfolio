@@ -27,7 +27,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
         document.body.appendChild(overlay);
 
         // Animate progress bar
-        const progress = overlay.querySelector('.progress-code');
+       /* const progress = overlay.querySelector('.progress-code');
         let width = 0;
         const interval = setInterval(() => {
             width += 2;
@@ -43,6 +43,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
         }, 0);
     });
 });
-
+*/
 // Other existing animations (typewriter, hover effects, etc.) remain unchanged
 // ... [rest of your existing animation code]
