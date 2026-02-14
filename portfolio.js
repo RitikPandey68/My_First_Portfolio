@@ -1,5 +1,5 @@
 // Navigation animation with terminal effect
-document.querySelectorAll('.nav-link').forEach(link => {
+/*document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         const sectionName = this.textContent;
@@ -25,7 +25,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
             </div>
         `;
         document.body.appendChild(overlay);
-
+*/
         // Animate progress bar
        /* const progress = overlay.querySelector('.progress-code');
         let width = 0;
