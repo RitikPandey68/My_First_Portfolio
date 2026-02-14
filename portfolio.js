@@ -48,139 +48,91 @@
 */
 // Other existing animations (typewriter, hover effects, etc.) remain unchanged
 // ... [rest of your existing animation code]
-
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
+    anchor.addEventListener("click", e => {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-        }
+        const target = document.querySelector(anchor.getAttribute("href"));
+        if (target) target.scrollIntoView({ behavior: "smooth" });
     });
 });
 
+// Active nav highlight
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 
 window.addEventListener("scroll", () => {
     let current = "";
-
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (scrollY >= sectionTop) {
+        if (scrollY >= section.offsetTop - 120) {
             current = section.getAttribute("id");
         }
     });
 
     navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-        }
+        link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${current}`
+        );
     });
 });
 
+// Mobile menu
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-links");
-
 hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("open");
 });
 
-
-const form = document.querySelector(".contact-form");
-const successMsg = document.getElementById("form-success");
-
-if (form) {
-    form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(form);
-        const action = form.getAttribute("action");
-
-        const response = await fetch(action, {
-            method: "POST",
-            body: formData,
-            headers: { "Accept": "application/json" }
-        });
-
-        if (response.ok) {
-            form.reset();
-            successMsg.style.display = "block";
-        }
-    });
-}
-
-
-const fadeElements = document.querySelectorAll(".project-card, .skill-category, .certificate-item");
+// Fade-in animation
+const fadeElements = document.querySelectorAll(
+    ".project-card, .skill-category, .certificate-item"
+);
 
 const fadeInOnScroll = () => {
     fadeElements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
             el.classList.add("visible");
         }
     });
 };
-
 window.addEventListener("scroll", fadeInOnScroll);
 fadeInOnScroll();
 
-
-
+// ✅ FORM SUBMIT (ONLY ONE)
 const form = document.querySelector(".contact-form");
 const modal = document.getElementById("thankyou-modal");
 const okBtn = document.getElementById("thankyou-ok");
 
 if (form) {
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault(); // 🔥 redirect stop
+    form.addEventListener("submit", async e => {
+        e.preventDefault(); // 🚫 redirect STOP
 
         const formData = new FormData(form);
 
-        const response = await fetch(form.action, {
-            method: "POST",
-            body: formData,
-            headers: { "Accept": "application/json" }
-        });
+        try {
+            const res = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: { "Accept": "application/json" }
+            });
 
-        if (response.ok) {
-            form.reset();
-            modal.style.display = "flex";
+            if (res.ok) {
+                form.reset();
+                modal.style.display = "flex";
 
-            // auto hide after 2 seconds
-            setTimeout(() => {
-                modal.style.display = "none";
-            }, 2000);
+                setTimeout(() => {
+                    modal.style.display = "none";
+                }, 2000);
+            }
+        } catch (err) {
+            console.error("Form error:", err);
         }
     });
 }
 
-// OK button close
 okBtn.addEventListener("click", () => {
     modal.style.display = "none";
-});
-
-
-const form = document.querySelector(".contact-form");
-const successMsg = document.getElementById("form-success");
-
-form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const action = form.getAttribute("action");
-
-    const response = await fetch(action, {
-        method: "POST",
-        body: formData,
-        headers: { "Accept": "application/json" }
-    });
-
-    if (response.ok) {
-        form.reset();
-        successMsg.style.display = "block";
-    }
 });
 
 
