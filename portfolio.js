@@ -30,7 +30,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
         const progress = overlay.querySelector('.progress-code');
         let width = 0;
         const interval = setInterval(() => {
-            width += 2;
+            width += 5;
             progress.style.width = `${width}%`;
             
             if(width >= 100) {
@@ -38,9 +38,9 @@ document.querySelectorAll('.nav-link').forEach(link => {
                 setTimeout(() => {
                     window.open(targetUrl, '_blank');
                     overlay.remove();
-                }, 50);
+                }, 10);
             }
-        }, 50);
+        }, 10);
     });
 });
 
