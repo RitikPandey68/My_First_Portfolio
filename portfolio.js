@@ -38,7 +38,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
                 setTimeout(() => {
                     window.open(targetUrl, '_blank');
                     overlay.remove();
-                }, 500);
+                }, 50);
             }
         }, 50);
     });
