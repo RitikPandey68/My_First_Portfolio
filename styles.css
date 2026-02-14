@@ -798,16 +798,52 @@ footer {
     margin-bottom: 20px;
 }
 
+/* ===== EXPERIENCE PAGE FIX ===== */
 
 .experience-page {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 60px 80px;   /* left-right space */
+    background: #0f172a;
+    padding: 80px 0;
+}
+
+.experience-container {
+    max-width: 900px;          /* 🔥 content width control */
+    margin: 0 auto;            /* 🔥 center horizontally */
+    padding: 0 24px;           /* mobile spacing */
+}
+
+.experience-card {
+    background: #1e293b;
+    padding: 32px 36px;
+    border-radius: 14px;
+    margin-bottom: 40px;
+}
+
+.experience-card h2 {
+    margin-bottom: 6px;
+}
+
+.experience-card h4 {
+    color: #60a5fa;
+    margin-bottom: 8px;
+}
+
+.experience-card p,
+.experience-card li {
+    line-height: 1.7;
+    color: #e5e7eb;
+}
+
+.experience-card ul {
+    padding-left: 22px;
+    margin-top: 10px;
 }
 
 .section-title {
     text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
 }
+
 
 
 
