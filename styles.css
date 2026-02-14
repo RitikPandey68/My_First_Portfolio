@@ -801,15 +801,18 @@ footer {
 /* ===== EXPERIENCE PAGE FIX ===== */
 /* ================= EXPERIENCE SECTION ================= */
 
-.experience-section {
-    background: #0f172a;
-    padding: 100px 0;
-}
+/* ================= EXPERIENCE PAGE ================= */
 
-.experience-container {
+.experience-page {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 80px 24px;
+}
+
+.experience-summary {
+    text-align: center;
+    color: #cbd5e1;
+    margin-bottom: 60px;
 }
 
 .experience-card {
@@ -820,75 +823,46 @@ footer {
     box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
-.exp-header {
+.experience-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
-.exp-header h3 {
-    font-size: 22px;
+.experience-header h2 {
     margin: 0;
 }
 
-.exp-header span {
-    color: #60a5fa;
-    font-size: 14px;
+.company {
+    color: #94a3b8;
+    font-size: 0.95rem;
 }
 
-.exp-company {
-    margin: 8px 0 20px;
-    color: #cbd5f5;
-    font-weight: 500;
+.duration {
+    background: #2563eb;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    white-space: nowrap;
 }
 
-.exp-block {
+.experience-content p {
+    margin-bottom: 14px;
+    line-height: 1.7;
+}
+
+.experience-content ul {
+    margin-left: 20px;
     margin-bottom: 16px;
 }
 
-.exp-block strong {
+.tech-stack {
+    margin-top: 16px;
     color: #93c5fd;
 }
 
-.exp-block p {
-    margin: 6px 0 0;
-    line-height: 1.7;
-    color: #e5e7eb;
-}
-
-.exp-block ul {
-    margin-top: 8px;
-    padding-left: 20px;
-}
-
-.exp-block li {
-    margin-bottom: 6px;
-    line-height: 1.6;
-}
-
-.tech-stack {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #d1d5db;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .exp-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-    }
-}
-
-
-
-/* FORCE TEXT ALIGN */
-.experience,
-.experience * {
-    text-align: right;
-}
 
 
 
