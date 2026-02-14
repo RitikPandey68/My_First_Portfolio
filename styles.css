@@ -802,66 +802,47 @@ footer {
 /* ================= EXPERIENCE SECTION ================= */
 
 /* ================= EXPERIENCE PAGE ================= */
-
-.experience-page {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 80px 24px;
-}
-
-.experience-summary {
-    text-align: center;
-    color: #cbd5e1;
-    margin-bottom: 60px;
-}
-
-.experience-card {
-    background: #1e293b;
-    border-radius: 16px;
-    padding: 36px;
-    margin-bottom: 48px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-
-.experience-header {
+.internship-page {
+    padding: 80px 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
 }
 
-.experience-header h2 {
-    margin: 0;
+/* wrapper controls CENTER WIDTH */
+.internship-wrapper {
+    width: 100%;
+    max-width: 900px;   /* ⭐ THIS FIXES LEFT ISSUE */
 }
 
-.company {
-    color: #94a3b8;
-    font-size: 0.95rem;
+/* actual card */
+.internship-card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.duration {
-    background: #2563eb;
-    color: #fff;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    white-space: nowrap;
+/* typography */
+.internship-card h2 {
+    margin-bottom: 6px;
 }
 
-.experience-content p {
-    margin-bottom: 14px;
-    line-height: 1.7;
+.internship-card h4 {
+    color: #6ea8ff;
+    margin-bottom: 12px;
 }
 
-.experience-content ul {
-    margin-left: 20px;
-    margin-bottom: 16px;
+.internship-card ul {
+    padding-left: 20px;
 }
 
-.tech-stack {
-    margin-top: 16px;
-    color: #93c5fd;
+.internship-card li {
+    margin-bottom: 8px;
+    line-height: 1.6;
 }
+
 
 
 
