@@ -65,6 +65,9 @@ function updateActiveNav() {
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
+        if (this.getAttribute('target') === '_blank') {
+            return; // Allow browser to open the link in a new tab
+        }
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             e.preventDefault();
@@ -72,6 +75,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             window.scrollTo({ top: offsetTop, behavior: 'smooth' });
         }
     });
+});
+
+// Auto-scroll on page load if hash exists (e.g., opened from a new tab)
+window.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+            setTimeout(() => {
+                const offsetTop = target.offsetTop - 70;
+                window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+            }, 400);
+        }
+    }
 });
 
 // ===== BACK TO TOP BUTTON =====
@@ -335,6 +351,9 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // ===== FOOTER LINKS SMOOTH SCROLL =====
 document.querySelectorAll('.footer-links a').forEach(link => {
     link.addEventListener('click', function(e) {
+        if (this.getAttribute('target') === '_blank') {
+            return; // Allow browser to open in new tab
+        }
         const href = this.getAttribute('href');
         if (href.startsWith('#')) {
             e.preventDefault();
