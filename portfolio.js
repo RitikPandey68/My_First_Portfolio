@@ -394,5 +394,94 @@ if (contactForm) {
     });
 }
 
+// ===== SHOW / HIDE TOGGLE LOGIC =====
+window.toggleSection = function(prefix, targetId, btnId, expandText, collapseText) {
+    const target = document.getElementById(targetId);
+    const btn = document.getElementById(btnId);
+    if (!target || !btn) return;
+
+    const isHidden = target.classList.contains('item-hidden');
+    const iconClass = prefix === 'exp' ? 'fas fa-briefcase' : 'fas fa-layer-group';
+
+    if (isHidden) {
+        // Expand
+        target.classList.remove('item-hidden');
+        target.classList.add('item-visible');
+        btn.classList.add('expanded');
+        btn.innerHTML = `<i class="${iconClass}"></i> ${collapseText} <i class="fas fa-chevron-up vab-arrow"></i>`;
+    } else {
+        // Collapse
+        target.classList.add('item-hidden');
+        target.classList.remove('item-visible');
+        btn.classList.remove('expanded');
+        btn.innerHTML = `<i class="${iconClass}"></i> ${expandText} <span class="vab-count">+1 more</span> <i class="fas fa-chevron-down vab-arrow"></i>`;
+    }
+    
+    // Trigger scroll reveal observer check
+    if (window.scrollY > 0) {
+        window.dispatchEvent(new Event('scroll'));
+    }
+};
+
+window.toggleMultiple = function(type, btnId, expandText, collapseText) {
+    const btn = document.getElementById(btnId);
+    if (!btn) return;
+
+    let items = [];
+    let iconClass = '';
+    let countNum = 0;
+
+    if (type === 'skills-extras') {
+        // Find all skill categories with item-hidden or item-visible in skills section
+        items = document.querySelectorAll('#skills .skill-category-card');
+        // Filter out the first 3 (which should always be visible)
+        items = Array.from(items).slice(3);
+        iconClass = 'fas fa-layer-group';
+        countNum = items.length;
+    } else if (type === 'projects-extras') {
+        // Find all project cards
+        items = document.querySelectorAll('#projects .project-card');
+        // Filter out the first 6 (which should always be visible)
+        items = Array.from(items).slice(6);
+        iconClass = 'fas fa-rocket';
+        countNum = items.length;
+    } else if (type === 'certs-extras') {
+        // Find all cert items
+        items = document.querySelectorAll('#certifications .certificate-item');
+        // Filter out the first 3 (which should always be visible)
+        items = Array.from(items).slice(3);
+        iconClass = 'fas fa-certificate';
+        countNum = items.length;
+    }
+
+    if (items.length === 0) return;
+
+    const isExpanded = btn.classList.contains('expanded');
+
+    if (!isExpanded) {
+        // Expand all target items
+        items.forEach(item => {
+            item.classList.remove('item-hidden');
+            item.classList.add('item-visible');
+        });
+        btn.classList.add('expanded');
+        btn.innerHTML = `<i class="${iconClass}"></i> ${collapseText} <i class="fas fa-chevron-up vab-arrow"></i>`;
+    } else {
+        // Collapse all target items
+        items.forEach(item => {
+            item.classList.add('item-hidden');
+            item.classList.remove('item-visible');
+        });
+        btn.classList.remove('expanded');
+        btn.innerHTML = `<i class="${iconClass}"></i> ${expandText} <span class="vab-count">+${countNum} more</span> <i class="fas fa-chevron-down vab-arrow"></i>`;
+    }
+    
+    // Trigger scroll reveal observer check
+    if (window.scrollY > 0) {
+        window.dispatchEvent(new Event('scroll'));
+    }
+};
+
 console.log('%cRitik Pandey — Portfolio 🚀', 'color:#6366f1;font-size:1.2rem;font-weight:bold;');
 console.log('%cJava Full Stack Developer | Bengaluru, India', 'color:#06b6d4;font-size:0.9rem;');
+

@@ -230,7 +230,7 @@
                 </div>
 
                 <!-- Mindmatrix -->
-                <div class="exp-card animate-on-scroll">
+                <div class="exp-card animate-on-scroll item-hidden" id="exp-mindmatrix">
                     <div class="exp-card-left">
                         <div class="exp-logo-wrap">
                             <div class="exp-logo mm-logo">
@@ -290,6 +290,15 @@
                 </div>
 
             </div>
+
+            <!-- VIEW ALL BUTTON - Experience -->
+            <div class="view-all-wrap" id="exp-toggle-wrap">
+                <button class="view-all-btn" id="exp-toggle-btn" onclick="toggleSection('exp','exp-mindmatrix','exp-toggle-btn','View Full Experience','Show Less')">
+                    <i class="fas fa-briefcase"></i> View Full Experience <span class="vab-count">+1 more</span>
+                    <i class="fas fa-chevron-down vab-arrow"></i>
+                </button>
+            </div>
+
         </section>
 
         <!-- ===== SKILLS ===== -->
@@ -355,8 +364,8 @@
                     </div>
                 </div>
 
-                <!-- Databases -->
-                <div class="skill-category-card animate-on-scroll">
+                <!-- Databases: hidden by default -->
+                <div class="skill-category-card animate-on-scroll item-hidden" id="skill-db">
                     <h3><i class="fas fa-database"></i> Databases</h3>
                     <div class="badges-wrap">
                         <span class="badge badge-db"><i class="fas fa-database"></i> MySQL</span>
@@ -370,8 +379,8 @@
                     </div>
                 </div>
 
-                <!-- AI / ML -->
-                <div class="skill-category-card animate-on-scroll">
+                <!-- AI / ML: hidden -->
+                <div class="skill-category-card animate-on-scroll item-hidden" id="skill-ai">
                     <h3><i class="fas fa-brain"></i> AI / ML</h3>
                     <div class="badges-wrap">
                         <span class="badge badge-ai"><i class="fas fa-chart-line"></i> Scikit-learn</span>
@@ -385,9 +394,9 @@
                     </div>
                 </div>
 
-                <!-- DevOps & Tools -->
-                <div class="skill-category-card animate-on-scroll">
-                    <h3><i class="fas fa-tools"></i> DevOps & Tools</h3>
+                <!-- DevOps: hidden -->
+                <div class="skill-category-card animate-on-scroll item-hidden" id="skill-devops">
+                    <h3><i class="fas fa-tools"></i> DevOps &amp; Tools</h3>
                     <div class="badges-wrap">
                         <span class="badge badge-devops"><i class="fab fa-git-alt"></i> Git</span>
                         <span class="badge badge-devops"><i class="fab fa-github"></i> GitHub</span>
@@ -400,8 +409,8 @@
                     </div>
                 </div>
 
-                <!-- CS Fundamentals -->
-                <div class="skill-category-card animate-on-scroll">
+                <!-- CS Fundamentals: hidden -->
+                <div class="skill-category-card animate-on-scroll item-hidden" id="skill-cs">
                     <h3><i class="fas fa-sitemap"></i> CS Fundamentals</h3>
                     <div class="badges-wrap">
                         <span class="badge badge-tool"> Data Structures</span>
@@ -414,9 +423,9 @@
                     </div>
                 </div>
 
-                <!-- OS & Platforms -->
-                <div class="skill-category-card animate-on-scroll">
-                    <h3><i class="fab fa-linux"></i> OS & Security</h3>
+                <!-- OS & Security: hidden -->
+                <div class="skill-category-card animate-on-scroll item-hidden" id="skill-os">
+                    <h3><i class="fab fa-linux"></i> OS &amp; Security</h3>
                     <div class="badges-wrap">
                         <span class="badge badge-os"><i class="fab fa-linux"></i> Linux (Ubuntu)</span>
                         <span class="badge badge-os"> Kali Linux</span>
@@ -429,6 +438,15 @@
                 </div>
 
             </div>
+
+            <!-- VIEW ALL BUTTON - Skills -->
+            <div class="view-all-wrap">
+                <button class="view-all-btn" onclick="toggleMultiple('skills-extras','this-btn-skills','View All 8 Skill Domains','Show Less Skills')" id="this-btn-skills">
+                    <i class="fas fa-layer-group"></i> View All 8 Skill Domains <span class="vab-count">+5 more</span>
+                    <i class="fas fa-chevron-down vab-arrow"></i>
+                </button>
+            </div>
+
         </section>
 
         <!-- ===== PROJECTS ===== -->
@@ -606,8 +624,8 @@
                     </div>
                 </div>
 
-                <!-- Attendance Tracking -->
-                <div class="project-card animate-on-scroll" data-category="python">
+                <!-- Attendance Tracking: hidden beyond 6 -->
+                <div class="project-card animate-on-scroll item-hidden" data-category="python">
                     <div class="project-card-header">
                         <span class="project-icon">📅</span>
                         <div class="project-badges">
@@ -631,8 +649,8 @@
                     </div>
                 </div>
 
-                <!-- Diabetes Prediction -->
-                <div class="project-card animate-on-scroll" data-category="python">
+                <!-- Diabetes Prediction: hidden -->
+                <div class="project-card animate-on-scroll item-hidden" data-category="python">
                     <div class="project-card-header">
                         <span class="project-icon">🩺</span>
                         <div class="project-badges">
@@ -657,8 +675,8 @@
                     </div>
                 </div>
 
-                <!-- KeyLogger Tool -->
-                <div class="project-card animate-on-scroll" data-category="security python">
+                <!-- KeyLogger Tool: hidden -->
+                <div class="project-card animate-on-scroll item-hidden" data-category="security python">
                     <div class="project-card-header">
                         <span class="project-icon">🔐</span>
                         <div class="project-badges">
@@ -682,8 +700,8 @@
                     </div>
                 </div>
 
-                <!-- Portfolio -->
-                <div class="project-card animate-on-scroll" data-category="web">
+                <!-- Portfolio: hidden -->
+                <div class="project-card animate-on-scroll item-hidden" data-category="web">
                     <div class="project-card-header">
                         <span class="project-icon">🌐</span>
                         <div class="project-badges">
@@ -710,6 +728,15 @@
                 </div>
 
             </div>
+
+            <!-- VIEW ALL BUTTON - Projects -->
+            <div class="view-all-wrap">
+                <button class="view-all-btn" id="this-btn-projects" onclick="toggleMultiple('projects-extras','this-btn-projects','View All 10 Projects','Show Less Projects')">
+                    <i class="fas fa-rocket"></i> View All 10 Projects <span class="vab-count">+4 more</span>
+                    <i class="fas fa-chevron-down vab-arrow"></i>
+                </button>
+            </div>
+
         </section>
 
         <!-- ===== CERTIFICATIONS ===== -->
@@ -765,26 +792,35 @@
                     </a>
                 </div>
 
-                <div class="certificate-item animate-on-scroll">
+                <div class="certificate-item animate-on-scroll item-hidden">
                     <img src="problem_Solving(Basic).png" alt="Problem Solving Basic HackerRank">
                     <div class="cert-badge-hackerrank"><i class="fas fa-check-circle"></i> HackerRank Verified</div>
                     <h3>Problem Solving (Basic)</h3>
                     <p>HackerRank Certification</p>
-                    <a href="https://www.hackerrank.com/certificates/e16c5bcfc7a3" target="_blank" class="certificate-download">
+                    <a href="https://www.hackerrank.com/certificates/e16c5bcfc7a3" target="_blank" rel="noopener noreferrer" class="certificate-download">
                         <i class="fas fa-external-link-alt"></i> View Certificate
                     </a>
                 </div>
 
-                <div class="certificate-item animate-on-scroll">
+                <div class="certificate-item animate-on-scroll item-hidden">
                     <img src="Problem_Solving(Intermediate).png" alt="Problem Solving Intermediate HackerRank">
                     <div class="cert-badge-hackerrank"><i class="fas fa-check-circle"></i> HackerRank Verified</div>
                     <h3>Problem Solving (Intermediate)</h3>
                     <p>HackerRank Certification</p>
-                    <a href="Problem_Solving(Intermediate).png" download class="certificate-download">
-                        <i class="fas fa-download"></i> Download
+                    <a href="Problem_Solving(Intermediate).png" target="_blank" rel="noopener noreferrer" class="certificate-download">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
                     </a>
                 </div>
             </div>
+
+            <!-- VIEW ALL BUTTON - Certificates -->
+            <div class="view-all-wrap">
+                <button class="view-all-btn" id="this-btn-certs" onclick="toggleMultiple('certs-extras','this-btn-certs','View All 5 Certificates','Show Less')">
+                    <i class="fas fa-certificate"></i> View All 5 Certificates <span class="vab-count">+2 more</span>
+                    <i class="fas fa-chevron-down vab-arrow"></i>
+                </button>
+            </div>
+
         </section>
 
         <!-- ===== CONTACT ===== -->
