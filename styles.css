@@ -19,6 +19,49 @@
     to   { opacity: 1; transform: translateY(0); }
 }
 
+/* ===== DEDICATED PAGES STYLE ===== */
+.section-deep-desc {
+    background: rgba(99, 102, 241, 0.04);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 1.5rem auto 3rem auto;
+    max-width: 1200px;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+.section-deep-desc:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: var(--glow-primary);
+}
+.section-deep-desc h3 {
+    color: var(--primary-light);
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.section-deep-desc p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 0.98rem;
+    margin-bottom: 1rem;
+}
+.section-deep-desc p:last-child {
+    margin-bottom: 0;
+}
+.section-deep-desc ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+.section-deep-desc li {
+    margin-bottom: 0.5rem;
+}
+
+
 .view-all-wrap {
     display: flex;
     justify-content: center;

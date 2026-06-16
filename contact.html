@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Ritik Pandey</title>
+    <meta name="description" content="Contact Ritik Pandey — Java Full Stack Developer based in Bengaluru, India. Get in touch for roles or collaborations.">
+    <title>Get In Touch | Ritik Pandey</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ===== NAVBAR ===== -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="download.jpeg" alt="Logo" style="height: 40px;">
-            </div>
-            <ul class="nav-links">
-                <li><a href="home.html" class="nav-link" data-section="Home">Home</a></li>
-                <li><a href="about.html" class="nav-link" data-section="About">About</a></li>
-                <li><a href="skills.html" class="nav-link" data-section="Skills">Skills</a></li>
-                <li><a href="projects.html" class="nav-link" data-section="Projects">Projects</a></li>
-                <li><a href="contact.html" class="nav-link active" data-section="Contact">Contact</a></li>
+        <nav class="navbar" id="navbar">
+            <div class="logo">RP&lt;/&gt;</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link" target="_blank" rel="noopener noreferrer">About</a></li>
+                <li><a href="experience.html" class="nav-link" target="_blank" rel="noopener noreferrer">Experience</a></li>
+                <li><a href="skills.html" class="nav-link" target="_blank" rel="noopener noreferrer">Skills</a></li>
+                <li><a href="projects.html" class="nav-link" target="_blank" rel="noopener noreferrer">Projects</a></li>
+                <li><a href="certifications.html" class="nav-link" target="_blank" rel="noopener noreferrer">Certs</a></li>
+                <li><a href="contact.html" class="nav-link active" target="_blank" rel="noopener noreferrer">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -29,54 +32,145 @@
         </nav>
     </header>
 
-    <main>
-        <section class="contact">
-            <h2 class="section-title">Get In <span>Touch</span></h2>
+    <main style="padding-top: 8rem;">
+        <canvas id="particles-canvas" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none;"></canvas>
+        
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" style="padding: 2rem 5%;">
+            <h2 class="section-title animate-on-scroll">Get In <span class="highlight">Touch</span></h2>
+            <span class="section-line animate-on-scroll"></span>
+            <p class="section-subtitle animate-on-scroll">Have a project in mind? Let's build something amazing together.</p>
+
+            <!-- KEY NOTE -->
+            <div class="key-note key-note-green animate-on-scroll">
+                <div class="kn-icon"><i class="fas fa-bolt"></i></div>
+                <div class="kn-content">
+                    <span class="kn-label">Key Note</span>
+                    <p><strong>Currently open to full-time roles &amp; internships.</strong> Available for Backend / Java Full Stack / Android development positions in Bengaluru and remotely. Typically responds within <strong>24 hours</strong>. You can also reach out directly on <a href="https://www.linkedin.com/in/ritik-pandey-sde/" target="_blank" rel="noopener noreferrer" style="color:var(--primary-light);font-weight:700;">LinkedIn</a> or <a href="https://wa.me/916203157922" target="_blank" rel="noopener noreferrer" style="color:#25d366;font-weight:700;">WhatsApp</a>.</p>
+                </div>
+            </div>
+
+            <!-- DEDICATED IN-DEPTH DESCRIPTION -->
+            <div class="section-deep-desc animate-on-scroll">
+                <h3><i class="fas fa-paper-plane"></i> Roles Interest &amp; Location Details</h3>
+                <p>
+                    I am actively seeking software engineering positions that align with my expertise in scalable backend architectures and mobile applications:
+                </p>
+                <ul>
+                    <li><strong>Target Roles</strong>: Java Developer, Backend Systems Engineer, Full Stack Developer, Android Developer, or SDE-1 positions.</li>
+                    <li><strong>Availability</strong>: Immediate availability for full-time employment, contract work, or internship positions.</li>
+                    <li><strong>Location Preferences</strong>: Open to relocation to Bengaluru, Pune, Hyderabad, NCR, or remote-first positions. Currently based in Bengaluru, India.</li>
+                    <li><strong>Response SLA</strong>: All inquiries received via email or the form below are processed daily. You can expect a response within **24 hours**. For urgent communication, please connect directly via LinkedIn or WhatsApp.</li>
+                </ul>
+            </div>
+
             <div class="contact-container">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <a href="mailto:pandeyritikkumar68@gmail.com">
+                <div class="contact-info-block animate-on-scroll">
+                    <h3>Let's Connect</h3>
+                    <p>I'm currently open to full-time roles and freelance opportunities. If you want to discuss a project or just say hi, feel free to reach out.</p>
+
+                    <div class="contact-detail-list">
+                        <a href="mailto:pandeyritikkumar68@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-detail-item">
+                            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="ci-text">
+                                <span class="ci-label">Email</span>
+                                <span class="ci-value">pandeyritikkumar68@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+916203157922" target="_blank" class="contact-detail-item">
+                            <div class="ci-icon"><i class="fas fa-phone"></i></div>
+                            <div class="ci-text">
+                                <span class="ci-label">Phone</span>
+                                <span class="ci-value">+91 62031 57922</span>
+                            </div>
+                        </a>
+                        <a href="tel:+917562806146" target="_blank" class="contact-detail-item">
+                            <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="ci-text">
+                                <span class="ci-label">Alternate</span>
+                                <span class="ci-value">+91 75628 06146</span>
+                            </div>
+                        </a>
+                        <a href="https://maps.google.com?q=Bengaluru,India" target="_blank" class="contact-detail-item">
+                            <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="ci-text">
+                                <span class="ci-label">Location</span>
+                                <span class="ci-value">Bengaluru, India</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="social-connect">
+                        <a href="https://www.linkedin.com/in/ritik-pandey-sde/" target="_blank" class="social-icon-btn" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/RitikPandey68" target="_blank" class="social-icon-btn" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://wa.me/916203157922" target="_blank" class="social-icon-btn" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:pandeyritikkumar68@gmail.com" class="social-icon-btn" title="Email">
                             <i class="fas fa-envelope"></i>
-                            <p>pandeyritikkumar68@gmail.com</p>
-                        </a>
-                    </div>
-                    <div class="info-item">
-                        <a href="tel:+916203157922">
-                            <i class="fas fa-phone"></i>
-                            <p>+91-6203157922</p>
-                        </a>
-                    </div>
-                    <div class="info-item">
-                        <a href="tel:+917562806146">
-                            <i class="fas fa-phone"></i>
-                            <p>+91-7562806146</p>
-                        </a>
-                    </div>
-                    <div class="info-item">
-                        <a href="https://maps.google.com?q=Bengaluru,India" target="_blank">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>Bengaluru, India</p>
                         </a>
                     </div>
                 </div>
-                <form class="contact-form" action="mailto:pandeyritikkumar68@gmail.com" method="post" enctype="text/plain">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn primary">Send Message</button>
-                </form>
+
+                <div class="contact-form animate-on-scroll">
+                    <h3><i class="fas fa-paper-plane" style="color:var(--primary-light);margin-right:0.5rem;"></i>Send a Message</h3>
+                    <form id="contactForm" action="mailto:pandeyritikkumar68@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Collaboration / Job Offer" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i>&nbsp; Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/ritik-pandey-594716323/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/RitikPandey1" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+        <div class="footer-top">
+            <div class="footer-brand">RP&lt;/&gt;</div>
+            <div class="footer-links">
+                <a href="index.html" target="_blank" rel="noopener noreferrer">Home</a>
+                <a href="about.html" target="_blank" rel="noopener noreferrer">About</a>
+                <a href="experience.html" target="_blank" rel="noopener noreferrer">Experience</a>
+                <a href="skills.html" target="_blank" rel="noopener noreferrer">Skills</a>
+                <a href="projects.html" target="_blank" rel="noopener noreferrer">Projects</a>
+                <a href="certifications.html" target="_blank" rel="noopener noreferrer">Certs</a>
+                <a href="contact.html" target="_blank" rel="noopener noreferrer">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/ritik-pandey-sde/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/RitikPandey68" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/916203157922" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:pandeyritikkumar68@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
-        <p>&copy; 2023 Ritik Pandey. All Rights Reserved.</p>
+        <div class="footer-bottom">
+            <p>© 2026 <strong>Ritik Pandey</strong> · Java Full Stack Developer · Bengaluru, India · Crafted with ❤️ &amp; ☕</p>
+        </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" title="Back to top"><i class="fas fa-chevron-up"></i></button>
 
     <script src="portfolio.js"></script>
 </body>

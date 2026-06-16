@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Ritik Pandey</title>
+    <meta name="description" content="About Ritik Pandey — Java Full Stack Developer. Background, Education history, and coding achievements.">
+    <title>About Me | Ritik Pandey</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ===== NAVBAR ===== -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="download.jpeg" alt="Logo" style="height: 40px;">
-            </div>
-            <ul class="nav-links">
-                <li><a href="home.html" class="nav-link" data-section="Home">Home</a></li>
-                <li><a href="about.html" class="nav-link active" data-section="About">About</a></li>
-                <li><a href="skills.html" class="nav-link" data-section="Skills">Skills</a></li>
-                <li><a href="projects.html" class="nav-link" data-section="Projects">Projects</a></li>
-                <li><a href="contact.html" class="nav-link" data-section="Contact">Contact</a></li>
+        <nav class="navbar" id="navbar">
+            <div class="logo">RP&lt;/&gt;</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active" target="_blank" rel="noopener noreferrer">About</a></li>
+                <li><a href="experience.html" class="nav-link" target="_blank" rel="noopener noreferrer">Experience</a></li>
+                <li><a href="skills.html" class="nav-link" target="_blank" rel="noopener noreferrer">Skills</a></li>
+                <li><a href="projects.html" class="nav-link" target="_blank" rel="noopener noreferrer">Projects</a></li>
+                <li><a href="certifications.html" class="nav-link" target="_blank" rel="noopener noreferrer">Certs</a></li>
+                <li><a href="contact.html" class="nav-link" target="_blank" rel="noopener noreferrer">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -29,104 +32,124 @@
         </nav>
     </header>
 
-    <main>
-        <section class="about">
-            <h2 class="section-title">About <span>Me</span></h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Full Stack Developer</h3>
-                    <p>I specialize in building responsive, user-friendly web applications using the MERN stack and cloud technologies. With a passion for clean code and efficient solutions, I create digital experiences that make an impact.</p>
+    <main style="padding-top: 8rem;">
+        <canvas id="particles-canvas" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none;"></canvas>
+        
+        <!-- ===== ABOUT ===== -->
+        <section id="about" style="padding: 2rem 5%;">
+            <h2 class="section-title animate-on-scroll">About <span class="highlight">Me</span></h2>
+            <span class="section-line animate-on-scroll"></span>
+            <p class="section-subtitle animate-on-scroll">Passionate developer turning ideas into scalable software.</p>
+
+            <!-- KEY NOTE -->
+            <div class="key-note animate-on-scroll">
+                <div class="kn-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="kn-content">
+                    <span class="kn-label">Key Note</span>
+                    <p>Backend-first thinker with <strong>3+ years</strong> of hands-on coding experience. Completed a <strong>2-month industry internship</strong> at Algomagus Geeks (Shift Boolean), awarded for <em>outstanding dedication &amp; technical skills</em>. 🏆 1st Prize winner at inter-college coding event &amp; a 5-Star coder on HackerRank in Java.</p>
                 </div>
-                
-                <div class="about-columns">
-                    <div class="about-column education-column">
-                        <div class="detail-item">
-                            <div class="education-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div>
-                                <h4>Education</h4>
-                                <ul class="education-list">
-                                    <li>
-                                        <strong>B.E in Computer Science</strong>
-                                        <p>MS Engineering College (2022-2026)</p>
-                                        <p>CGPA: 8.5/10</p>
-                                    </li>
-                                    <li>
-                                        <strong>Class XII (BSEB)</strong>
-                                        <p>Hari Shankar Verma Co-operative Inter College (2019)</p>
-                                        <p>Percentage: 58.2%</p>
-                                    </li>
-                                    <li>
-                                        <strong>Class X (BSEB)</strong>
-                                        <p>High School Sathi (2017)</p>
-                                        <p>Percentage: 56.8%</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+            </div>
+
+            <!-- DEDICATED IN-DEPTH DESCRIPTION -->
+            <div class="section-deep-desc animate-on-scroll">
+                <h3><i class="fas fa-user-circle"></i> Professional Background &amp; Philosophy</h3>
+                <p>
+                    As a dedicated <strong>Java Full Stack Developer</strong>, I focus on building backend architectures that are highly performant, scalable, and secure. I believe in writing clean, self-documenting code and applying design principles such as SOLID and MVC to create maintainable systems. My academic journey in Computer Science &amp; Engineering has given me a deep appreciation for algorithms, data structures, and system internals.
+                </p>
+                <p>
+                    Throughout my engineering studies and practical internships, I have specialized in Java (Spring Boot, Spring Security, Hibernate) and Python (FastAPI, Scikit-learn). I actively participate in coding contests, hackathons, and security challenges (CTFs) to continuously push my technical limits.
+                </p>
+                <ul>
+                    <li>🌱 Currently refining my system design skills and studying microservices patterns.</li>
+                    <li>💻 Experienced in building high-frequency REST APIs, webhook processing engines, and machine learning scoring models.</li>
+                    <li>🤝 Highly collaborative developer, comfortable working with agile scrum teams and modern version control (Git/GitHub).</li>
+                </ul>
+            </div>
+
+            <div class="about-grid">
+                <div class="animate-on-scroll">
+                    <div class="about-text-block glass-card" style="margin-bottom:1.5rem;">
+                        <span class="card-icon blue"><i class="fas fa-user-astronaut"></i></span>
+                        <h3>Java Full Stack Developer</h3>
+                        <p>
+                            I am a backend-focused developer with strong expertise in designing and building scalable, secure, and high-performance server-side applications.
+                            My core strengths lie in developing RESTful APIs, implementing authentication &amp; authorization mechanisms, and working with databases to ensure data integrity and performance.
+                        </p>
+                        <p>
+                            I enjoy solving real-world problems through clean backend architecture and efficient system design, while collaborating closely with frontend and DevOps teams to deliver reliable, production-ready solutions.
+                        </p>
                     </div>
-                    
-                    <div class="about-column achievements-column">
-                        <div class="detail-item">
-                            <div class="achievements-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
-                            <div>
-                                <h4>Achievements</h4>
-                                <ul class="achievements-list">
-                                    <li>1st Prize Winner in Code in Dark Event (Vidya College of Engineering)</li>
-                                    <li>5 Star Coder in Java at HackerRank (Completed all Java problems)</li>
-                                    <li>Java (Basic) Certificate - HackerRank</li>
-                                    <li>Python (Basic) Certificate - HackerRank</li>
-                                    <li>Problem Solving (Basic) Certificate - HackerRank</li>
-                                    <li>SQL (Basic) Certificate - HackerRank</li>
-                                    <li>5 Star Coder in Python at HackerRank</li>
-                                    <li>3 Star Coder in C at HackerRank</li>
-                                    <li>Certificate for Participating in Capture the Flag (CTF) competition</li>
-                                </ul>
-                                <div class="certificates-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
-                                    <div class="certificate-item">
-                                        <img src="JAVA_CERTIFICATE.png" alt="Java (Basic) HackerRank Certification">
-                                        <h3>Java (Basic)</h3>
-                                        <p>HackerRank Certification</p>
-                                        <a href="https://www.hackerrank.com/certificates/f0f6c6ba5a4d" download class="certificate-download">Download Certificate</a>
-                                    </div>
-                                    <div class="certificate-item">
-                                        <img src="python_basic.png" alt="Python (Basic) HackerRank Certification">
-                                        <h3>Python (Basic)</h3>
-                                        <p>HackerRank Certification</p>
-                                        <a href="https://www.hackerrank.com/certificates/93997f39d350" download class="certificate-download">Download Certificate</a>
-                                    </div>
-                                    <div class="certificate-item">
-                                        <img src="problem_Solving(Basic).png" alt="Problem Solving Basic HackerRank Certification">
-                                        <h3>Problem Solving Basic</h3>
-                                        <p>HackerRank Certification</p>
-                                        <a href="https://www.hackerrank.com/certificates/e16c5bcfc7a3" download class="certificate-download">Download Certificate</a>
-                                    </div>
-                                    <div class="certificate-item">
-                                        <img src="Problem_Solving(Intermediate).png" alt="Problem_Solving (Intermediate) HackerRank Certification">
-                                        <h3>Problem_Solving (Intermediate)</h3>
-                                        <p>HackerRank Certification</p>
-                                        <a href="Problem_Solving(Intermediate).png" download class="certificate-download">Download Certificate</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                    <div class="glass-card animate-on-scroll">
+                        <span class="card-icon gold"><i class="fas fa-graduation-cap"></i></span>
+                        <h4>Education</h4>
+                        <ul class="education-list">
+                            <li>
+                                <strong>B.E in Computer Science</strong>
+                                <p>MS Engineering College (2022 – 2026)</p>
+                                <p>CGPA: 6.8 / 10</p>
+                            </li>
+                            <li>
+                                <strong>Class XII — BSEB</strong>
+                                <p>Hari Shankar Verma Co-operative Inter College (2019)</p>
+                                <p>Percentage: 58.2%</p>
+                            </li>
+                            <li>
+                                <strong>Class X — BSEB</strong>
+                                <p>High School Sathi (2017)</p>
+                                <p>Percentage: 56.8%</p>
+                            </li>
+                        </ul>
                     </div>
+                </div>
+
+                <div class="glass-card animate-on-scroll" style="align-self:start;">
+                    <span class="card-icon gold"><i class="fas fa-trophy"></i></span>
+                    <h4>Achievements &amp; Honors</h4>
+                    <ul class="achievements-list">
+                        <li>🥇 1st Prize — Code in Dark Event (Vidya College of Engineering)</li>
+                        <li>⭐ 5 Star Coder in Java at HackerRank (All Java problems solved)</li>
+                        <li>✅ Java Certified Coder — HackerRank</li>
+                        <li>⭐ 5 Star Coder in Python at HackerRank</li>
+                        <li>✅ Python Certified Coder — HackerRank</li>
+                        <li>⭐ 3 Star Coder in C at HackerRank</li>
+                        <li>🚩 Capture The Flag (CTF) Competition Certificate</li>
+                        <li>📜 Java Assessment Test — Certificate of Completion</li>
+                        <li>📜 Python Assessment Test — Certificate of Completion</li>
+                        <li>✅ Problem Solving — Basic &amp; Intermediate Certified (HackerRank)</li>
+                    </ul>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/ritik-pandey-594716323/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/RitikPandey1" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+        <div class="footer-top">
+            <div class="footer-brand">RP&lt;/&gt;</div>
+            <div class="footer-links">
+                <a href="index.html" target="_blank" rel="noopener noreferrer">Home</a>
+                <a href="about.html" target="_blank" rel="noopener noreferrer">About</a>
+                <a href="experience.html" target="_blank" rel="noopener noreferrer">Experience</a>
+                <a href="skills.html" target="_blank" rel="noopener noreferrer">Skills</a>
+                <a href="projects.html" target="_blank" rel="noopener noreferrer">Projects</a>
+                <a href="certifications.html" target="_blank" rel="noopener noreferrer">Certs</a>
+                <a href="contact.html" target="_blank" rel="noopener noreferrer">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/ritik-pandey-sde/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/RitikPandey68" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/916203157922" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:pandeyritikkumar68@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
-        <p>&copy; 2023 Ritik Pandey. All Rights Reserved.</p>
+        <div class="footer-bottom">
+            <p>© 2026 <strong>Ritik Pandey</strong> · Java Full Stack Developer · Bengaluru, India · Crafted with ❤️ &amp; ☕</p>
+        </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" title="Back to top"><i class="fas fa-chevron-up"></i></button>
 
     <script src="portfolio.js"></script>
 </body>

@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Skills | Ritik Pandey</title>
+    <meta name="description" content="Technical Stack of Ritik Pandey — Backend Java, Spring Boot, Python ML, Frontend, Databases, DevOps, and CS fundamentals.">
+    <title>Technical Stack | Ritik Pandey</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ===== NAVBAR ===== -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="download.jpeg" alt="Logo" style="height: 40px;">
-            </div>
-            <ul class="nav-links">
-                <li><a href="home.html" class="nav-link" data-section="Home">Home</a></li>
-                <li><a href="about.html" class="nav-link" data-section="About">About</a></li>
-                <li><a href="skills.html" class="nav-link active" data-section="Skills">Skills</a></li>
-                <li><a href="projects.html" class="nav-link" data-section="Projects">Projects</a></li>
-                <li><a href="contact.html" class="nav-link" data-section="Contact">Contact</a></li>
+        <nav class="navbar" id="navbar">
+            <div class="logo">RP&lt;/&gt;</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link" target="_blank" rel="noopener noreferrer">About</a></li>
+                <li><a href="experience.html" class="nav-link" target="_blank" rel="noopener noreferrer">Experience</a></li>
+                <li><a href="skills.html" class="nav-link active" target="_blank" rel="noopener noreferrer">Skills</a></li>
+                <li><a href="projects.html" class="nav-link" target="_blank" rel="noopener noreferrer">Projects</a></li>
+                <li><a href="certifications.html" class="nav-link" target="_blank" rel="noopener noreferrer">Certs</a></li>
+                <li><a href="contact.html" class="nav-link" target="_blank" rel="noopener noreferrer">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -29,287 +32,189 @@
         </nav>
     </header>
 
-    <main>
-        <section class="skills-hero">
-            <div class="hero-content">
-                <h1>My <span>Skills</span></h1>
-                <p>Technical expertise that powers my projects and solutions</p>
-                <div class="skill-highlights">
-                    <div class="highlight-item">
-                        <i class="fas fa-code"></i>
-                        <span>5+ Programming Languages</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-laptop-code"></i>
-                        <span>Full Stack Development</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-brain"></i>
-                        <span>Problem Solving</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <main style="padding-top: 8rem;">
+        <canvas id="particles-canvas" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none;"></canvas>
+        
+        <!-- ===== SKILLS ===== -->
+        <section id="skills" style="padding: 2rem 5%;">
+            <h2 class="section-title animate-on-scroll">My <span class="highlight">Tech Stack</span></h2>
+            <span class="section-line animate-on-scroll"></span>
+            <p class="section-subtitle animate-on-scroll">Technologies I work with, grouped by domain.</p>
 
-        <section class="skills-intro">
-            <h2>Technical Proficiency</h2>
-            <p>I've developed expertise across multiple domains through hands-on projects and continuous learning. Here's a detailed breakdown of my skills:</p>
-        </section>
+            <!-- KEY NOTE -->
+            <div class="key-note key-note-cyan animate-on-scroll">
+                <div class="kn-icon"><i class="fas fa-layer-group"></i></div>
+                <div class="kn-content">
+                    <span class="kn-label">Key Note</span>
+                    <p>Proficient across <strong>8 technology domains</strong> — from Java backend systems &amp; Spring Boot APIs to React frontends, ML pipelines with Python, and DevOps tooling. All skills are backed by real projects and industry certifications — <strong>no inflated percentages, just proven depth.</strong></p>
+                </div>
+            </div>
 
-        <section class="skills-container">
-            <div class="skill-category">
-                <div class="category-header">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Programming Languages</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Java</span>
-                        <div class="skill-details">
-                            <p>Core Java, OOP Concepts, Collections Framework</p>
-                            <p>Projects: Task Management System, Java Certification</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
-                    <span class="skill-percent">90%</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Python</span>
-                        <div class="skill-details">
-                            <p>Data Analysis, Machine Learning, Flask</p>
-                            <p>Projects: Diabetes Prediction System</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
-                    <span class="skill-percent">85%</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>JavaScript</span>
-                        <div class="skill-details">
-                            <p>ES6+, DOM Manipulation, Async Programming</p>
-                            <p>Projects: Movix Website, This Portfolio</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
-                    <span class="skill-percent">80%</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>C/C++</span>
-                        <div class="skill-details">
-                            <p>Data Structures, Algorithms, System Programming</p>
-                            <p>Projects: University Coursework</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
-                    <span class="skill-percent">85%</span>
-                </div>
+            <!-- DEDICATED IN-DEPTH DESCRIPTION -->
+            <div class="section-deep-desc animate-on-scroll">
+                <h3><i class="fas fa-tools"></i> Engineering Skills Breakdown</h3>
+                <p>
+                    My technical expertise covers both server-side backend services and modern interactive frontend apps. I design systems with scalability, security, and performance in mind:
+                </p>
+                <ul>
+                    <li><strong>Backend Systems</strong>: Building RESTful APIs using Spring Boot, Hibernate, JPA, and security frameworks (JWT authentication, role-based controls). Database design, indexing, and optimization across SQL (PostgreSQL, MySQL) and NoSQL (MongoDB, Redis).</li>
+                    <li><strong>Languages &amp; Runtimes</strong>: Advanced Java coder, intermediate Python for ML models, Node.js for scalable API runtimes, Go for low-latency microservices, and TypeScript for secure, type-safe full-stack apps.</li>
+                    <li><strong>CS Foundations &amp; Operations</strong>: Solid understanding of OOP design, SOLID patterns, data structures, algorithms, and cybersecurity principles. Fully capable of deploying containerized applications with Docker and implementing CI/CD pipelines.</li>
+                </ul>
             </div>
-            
-            <div class="skill-category">
-                <div class="category-header">
-                    <i class="fas fa-brain"></i>
-                    <h3>Computer Science Fundamentals</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Data Structures</span>
-                        <div class="skill-details">
-                            <p>Arrays, Linked Lists, Trees, Graphs, Hash Tables</p>
-                            <p>Implementation in Java and Python</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
-                    <span class="skill-percent">90%</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Algorithms</span>
-                        <div class="skill-details">
-                            <p>Sorting, Searching, Graph Algorithms, Dynamic Programming</p>
-                            <p>HackerRank 5-star in Problem Solving</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
-                    <span class="skill-percent">85%</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Problem Solving</span>
-                        <div class="skill-details">
-                            <p>Competitive Programming, LeetCode, CodeChef</p>
-                            <p>1st Prize in Code in Dark Event</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
-                    <span class="skill-percent">90%</span>
-                </div>
-            </div>
-            
-            <div class="skill-category">
-                <div class="category-header">
-                    <i class="fas fa-tools"></i>
-                    <h3>Tools & Technologies</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>GitHub</span>
-                        <div class="skill-details">
-                            <p>Version Control, Collaboration, CI/CD</p>
-                            <p>All projects hosted on GitHub</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
-                    <span class="skill-percent">85%</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Git Bash</span>
-                        <div class="skill-details">
-                            <p>Command Line, Version Control</p>
-                            <p>Daily use for project management</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
-                    <span class="skill-percent">80%</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>IntelliJ</span>
-                        <div class="skill-details">
-                            <p>Java Development, Debugging</p>
-                            <p>Primary IDE for Java projects</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
-                    <span class="skill-percent">75%</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Visual Studio</span>
-                        <div class="skill-details">
-                            <p>Web Development, Debugging</p>
-                            <p>Primary IDE for web projects</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
-                    <span class="skill-percent">80%</span>
-                </div>
-            </div>
-            
-            <div class="skill-category">
-                <div class="category-header">
-                    <i class="fas fa-server"></i>
-                    <h3>Operating Systems</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Linux (Ubuntu)</span>
-                        <div class="skill-details">
-                            <p>System Administration, Shell Scripting</p>
-                            <p>Primary development environment</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
-                    <span class="skill-percent">85%</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Linux (Kali)</span>
-                        <div class="skill-details">
-                            <p>Security Tools, Penetration Testing</p>
-                            <p>CTF competitions experience</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
-                    <span class="skill-percent">80%</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Windows</span>
-                        <div class="skill-details">
-                            <p>System Administration, Development</p>
-                            <p>Secondary development environment</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
-                    <span class="skill-percent">90%</span>
-                </div>
-            </div>
-            
-            <div class="skill-category">
-                <div class="category-header">
-                    <i class="fas fa-globe"></i>
-                    <h3>Web Development</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>React</span>
-                        <div class="skill-details">
-                            <p>Components, Hooks, Context API</p>
-                            <p>Projects: Movix Website</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
-                    <span class="skill-percent">85%</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Node.js</span>
-                        <div class="skill-details">
-                            <p>Express.js, REST APIs, Authentication</p>
-                            <p>Projects: Movix Backend</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
-                    <span class="skill-percent">80%</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>HTML/CSS</span>
-                        <div class="skill-details">
-                            <p>Responsive Design, Flexbox, Grid</p>
-                            <p>Projects: This Portfolio, Movix UI</p>
-                        </div>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
-                    <span class="skill-percent">90%</span>
-                </div>
-            </div>
-        </section>
 
-        <section class="skills-certifications">
-            <h2>Certifications</h2>
-            <div class="certifications-grid">
-                <div class="certification-card">
-                    <i class="fas fa-certificate"></i>
-                    <h3>Java Certified</h3>
-                    <p>HackerRank</p>
+            <div class="skills-grid">
+
+                <!-- Backend Core -->
+                <div class="skill-category-card animate-on-scroll">
+                    <h3><i class="fas fa-coffee"></i> Java Backend</h3>
+                    <div class="badges-wrap">
+                        <span class="badge badge-java"><i class="fas fa-coffee"></i> Java 17+</span>
+                        <span class="badge badge-spring"><i class="fas fa-leaf"></i> Spring Boot</span>
+                        <span class="badge badge-spring"><i class="fas fa-shield-alt"></i> Spring Security</span>
+                        <span class="badge badge-spring"><i class="fas fa-database"></i> Spring Data JPA</span>
+                        <span class="badge badge-spring"> Hibernate</span>
+                        <span class="badge badge-java"> Maven</span>
+                        <span class="badge badge-java"> Gradle</span>
+                        <span class="badge badge-java"> REST API</span>
+                        <span class="badge badge-java"> JWT Auth</span>
+                    </div>
                 </div>
-                <div class="certification-card">
-                    <i class="fas fa-certificate"></i>
-                    <h3>Python Certified</h3>
-                    <p>HackerRank</p>
+
+                <!-- Languages -->
+                <div class="skill-category-card animate-on-scroll">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="badges-wrap">
+                        <span class="badge badge-java"><i class="fas fa-coffee"></i> Java</span>
+                        <span class="badge badge-python"><i class="fab fa-python"></i> Python</span>
+                        <span class="badge badge-js"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="badge badge-go"> Go (Golang)</span>
+                        <span class="badge badge-tool"> C / C++</span>
+                        <span class="badge badge-web"> TypeScript</span>
+                        <span class="badge badge-tool"> Kotlin</span>
+                        <span class="badge badge-tool"> SQL</span>
+                    </div>
                 </div>
-                <div class="certification-card">
-                    <i class="fas fa-trophy"></i>
-                    <h3>Code in Dark Winner</h3>
-                    <p>Vidya College</p>
+
+                <!-- Frontend -->
+                <div class="skill-category-card animate-on-scroll">
+                    <h3><i class="fas fa-layer-group"></i> Frontend</h3>
+                    <div class="badges-wrap">
+                        <span class="badge badge-web"><i class="fab fa-react"></i> React.js</span>
+                        <span class="badge badge-js"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="badge badge-web"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="badge badge-web"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="badge badge-web"> Next.js</span>
+                        <span class="badge badge-js"> Express.js</span>
+                        <span class="badge badge-web"> Context API</span>
+                        <span class="badge badge-web"> Redux</span>
+                    </div>
                 </div>
+
+                <!-- Databases -->
+                <div class="skill-category-card animate-on-scroll" id="skill-db">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="badges-wrap">
+                        <span class="badge badge-db"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="badge badge-db"> PostgreSQL</span>
+                        <span class="badge badge-db"> MongoDB</span>
+                        <span class="badge badge-db"> Oracle DB</span>
+                        <span class="badge badge-db"> Redis</span>
+                        <span class="badge badge-db"> Firebase</span>
+                        <span class="badge badge-db"> SQLite</span>
+                        <span class="badge badge-db"> SQLC</span>
+                    </div>
+                </div>
+
+                <!-- AI / ML -->
+                <div class="skill-category-card animate-on-scroll" id="skill-ai">
+                    <h3><i class="fas fa-brain"></i> AI / ML</h3>
+                    <div class="badges-wrap">
+                        <span class="badge badge-ai"><i class="fas fa-chart-line"></i> Scikit-learn</span>
+                        <span class="badge badge-ai"> Pandas</span>
+                        <span class="badge badge-ai"> NumPy</span>
+                        <span class="badge badge-ai"> FastAPI</span>
+                        <span class="badge badge-ai"> Celery</span>
+                        <span class="badge badge-ai"> WebSockets</span>
+                        <span class="badge badge-python"> Jupyter</span>
+                        <span class="badge badge-ai"> Random Forest</span>
+                    </div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="skill-category-card animate-on-scroll" id="skill-devops">
+                    <h3><i class="fas fa-tools"></i> DevOps &amp; Tools</h3>
+                    <div class="badges-wrap">
+                        <span class="badge badge-devops"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="badge badge-devops"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="badge badge-devops"> Docker</span>
+                        <span class="badge badge-tool"> IntelliJ IDEA</span>
+                        <span class="badge badge-tool"> VS Code</span>
+                        <span class="badge badge-tool"> Eclipse</span>
+                        <span class="badge badge-tool"> Postman</span>
+                        <span class="badge badge-devops"> CI/CD</span>
+                    </div>
+                </div>
+
+                <!-- CS Fundamentals -->
+                <div class="skill-category-card animate-on-scroll" id="skill-cs">
+                    <h3><i class="fas fa-sitemap"></i> CS Fundamentals</h3>
+                    <div class="badges-wrap">
+                        <span class="badge badge-tool"> Data Structures</span>
+                        <span class="badge badge-tool"> Algorithms</span>
+                        <span class="badge badge-tool"> OOP Principles</span>
+                        <span class="badge badge-tool"> System Design</span>
+                        <span class="badge badge-tool"> Design Patterns</span>
+                        <span class="badge badge-tool"> Problem Solving</span>
+                        <span class="badge badge-tool"> SOLID Principles</span>
+                    </div>
+                </div>
+
+                <!-- OS & Security -->
+                <div class="skill-category-card animate-on-scroll" id="skill-os">
+                    <h3><i class="fab fa-linux"></i> OS &amp; Security</h3>
+                    <div class="badges-wrap">
+                        <span class="badge badge-os"><i class="fab fa-linux"></i> Linux (Ubuntu)</span>
+                        <span class="badge badge-os"> Kali Linux</span>
+                        <span class="badge badge-os"> Parrot OS</span>
+                        <span class="badge badge-os"><i class="fab fa-windows"></i> Windows</span>
+                        <span class="badge badge-tool"> Cybersecurity</span>
+                        <span class="badge badge-tool"> CTF Challenges</span>
+                        <span class="badge badge-tool"> Keylogger Dev</span>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/ritik-pandey-594716323/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/RitikPandey1" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+        <div class="footer-top">
+            <div class="footer-brand">RP&lt;/&gt;</div>
+            <div class="footer-links">
+                <a href="index.html" target="_blank" rel="noopener noreferrer">Home</a>
+                <a href="about.html" target="_blank" rel="noopener noreferrer">About</a>
+                <a href="experience.html" target="_blank" rel="noopener noreferrer">Experience</a>
+                <a href="skills.html" target="_blank" rel="noopener noreferrer">Skills</a>
+                <a href="projects.html" target="_blank" rel="noopener noreferrer">Projects</a>
+                <a href="certifications.html" target="_blank" rel="noopener noreferrer">Certs</a>
+                <a href="contact.html" target="_blank" rel="noopener noreferrer">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/ritik-pandey-sde/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/RitikPandey68" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/916203157922" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:pandeyritikkumar68@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
-        <p>&copy; 2023 Ritik Pandey. All Rights Reserved.</p>
+        <div class="footer-bottom">
+            <p>© 2026 <strong>Ritik Pandey</strong> · Java Full Stack Developer · Bengaluru, India · Crafted with ❤️ &amp; ☕</p>
+        </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" title="Back to top"><i class="fas fa-chevron-up"></i></button>
 
     <script src="portfolio.js"></script>
 </body>

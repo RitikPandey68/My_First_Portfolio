@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Ritik Pandey</title>
+    <meta name="description" content="Projects Portfolio of Ritik Pandey — Java REST APIs, Spring Boot apps, Python ML engines, and Go microservices.">
+    <title>Featured Projects | Ritik Pandey</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ===== NAVBAR ===== -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="download.jpeg" alt="Logo" style="height: 40px;">
-            </div>
-            <ul class="nav-links">
-                <li><a href="home.html" class="nav-link" data-section="Home">Home</a></li>
-                <li><a href="about.html" class="nav-link" data-section="About">About</a></li>
-                <li><a href="skills.html" class="nav-link" data-section="Skills">Skills</a></li>
-                <li><a href="projects.html" class="nav-link active" data-section="Projects">Projects</a></li>
-                <li><a href="contact.html" class="nav-link" data-section="Contact">Contact</a></li>
+        <nav class="navbar" id="navbar">
+            <div class="logo">RP&lt;/&gt;</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link" target="_blank" rel="noopener noreferrer">About</a></li>
+                <li><a href="experience.html" class="nav-link" target="_blank" rel="noopener noreferrer">Experience</a></li>
+                <li><a href="skills.html" class="nav-link" target="_blank" rel="noopener noreferrer">Skills</a></li>
+                <li><a href="projects.html" class="nav-link active" target="_blank" rel="noopener noreferrer">Projects</a></li>
+                <li><a href="certifications.html" class="nav-link" target="_blank" rel="noopener noreferrer">Certs</a></li>
+                <li><a href="contact.html" class="nav-link" target="_blank" rel="noopener noreferrer">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -29,100 +32,331 @@
         </nav>
     </header>
 
-    <main>
-        <section class="projects">
-            <h2 class="section-title">My <span>Projects</span></h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Diabetes Prediction System</h3>
-                    <p>An advanced machine learning system that predicts diabetes risk with 78% accuracy using:</p>
-                    <ul class="project-features">
-                        <li>Python with Scikit-learn, Pandas and NumPy</li>
-                        <li>Random Forest Classifier algorithm</li>
-                        <li>Feature importance analysis to identify key health indicators</li>
-                        <li>Interactive web interface built with Flask</li>
-                        <li>Data preprocessing pipeline for handling missing values</li>
-                        <li>Model evaluation using precision-recall metrics</li>
-                    </ul>
-                    <p>The system analyzes 8 key health indicators including glucose levels, BMI, and age to provide personalized risk assessments.</p>
-                    <a href="https://github.com/RitikPandey1/Diabetes-Prediction" class="project-link" target="_blank">View Project on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>Movix Website</h3>
-                    <p>A full-featured movie streaming platform built with:</p>
-                    <ul class="project-features">
-                        <li><strong>Frontend:</strong> React.js with functional components and hooks</li>
-                        <li><strong>Backend:</strong> Node.js with Express.js REST API</li>
-                        <li><strong>Database:</strong> MongoDB with Mongoose ORM</li>
-                        <li><strong>Authentication:</strong> JWT with refresh tokens</li>
-                        <li><strong>State Management:</strong> Context API</li>
-                        <li><strong>Styling:</strong> CSS Grid and Flexbox</li>
-                    </ul>
-                    <p>Key Features:</p>
-                    <ul>
-                        <li>User authentication and profile management</li>
-                        <li>Movie browsing with filters and search</li>
-                        <li>Watchlist functionality</li>
-                        <li>Rating and review system</li>
-                        <li>Admin dashboard for content management</li>
-                    </ul>
-                    <a href="https://github.com/RitikPandey1/Movix" class="project-link" target="_blank">View Project on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>Task Management System</h3>
-                    <p>A full-featured productivity application built with:</p>
-                    <ul class="project-features">
-                        <li>React with Redux for state management</li>
-                        <li>Firebase Realtime Database for data storage</li>
-                        <li>User authentication with Firebase Auth</li>
-                        <li>Drag-and-drop task organization</li>
-                        <li>Priority-based task filtering</li>
-                        <li>Responsive design for all devices</li>
-                    </ul>
-                    <p>Features include task creation, assignment, due dates, progress tracking, and team collaboration.</p>
-                    <a href="https://github.com/RitikPandey1/Task-Management" class="project-link" target="_blank">View Project on GitHub</a>
+    <main style="padding-top: 8rem;">
+        <canvas id="particles-canvas" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none;"></canvas>
+        
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects" style="padding: 2rem 5%;">
+            <h2 class="section-title animate-on-scroll">Featured <span class="highlight">Projects</span></h2>
+            <span class="section-line animate-on-scroll"></span>
+            <p class="section-subtitle animate-on-scroll">All projects from my GitHub — building real-world solutions.</p>
+
+            <!-- KEY NOTE -->
+            <div class="key-note key-note-gold animate-on-scroll">
+                <div class="kn-icon"><i class="fas fa-rocket"></i></div>
+                <div class="kn-content">
+                    <span class="kn-label">Key Note</span>
+                    <p><strong>10 GitHub projects</strong> spanning Java/Spring Boot backends, Python ML systems, Go microservices, Android apps, and cybersecurity tools. Each project is open-source and production-ready. Click any <strong>GitHub</strong> button to explore the full source code — it opens in a new tab.</p>
                 </div>
             </div>
 
-            <!-- Certificates Section -->
-            <h2 class="section-title" style="margin-top: 4rem;">My <span>Certifications</span></h2>
-            <div class="certificates-grid">
-                <div class="certificate-item">
-                    <img src="JAVA_CERTIFICATE.png" alt="Java (Basic) HackerRank Certification">
-                    <h3>Java (Basic)</h3>
-                    <p>HackerRank Certification</p>
-                    <a href="https://www.hackerrank.com/certificates/f0f6c6ba5a4d" download class="certificate-download">Download Certificate</a>
+            <!-- DEDICATED IN-DEPTH DESCRIPTION -->
+            <div class="section-deep-desc animate-on-scroll">
+                <h3><i class="fas fa-laptop-code"></i> Engineering &amp; Project Philosophy</h3>
+                <p>
+                    My project portfolio represents hands-on software engineering. I build tools that solve practical problems, focusing heavily on server robustness, database query speeds, APIs, and modern frontends:
+                </p>
+                <ul>
+                    <li><strong>Backend Systems</strong>: The *SmartMerchant AI Risk Engine* and *Payment Workflow Simulator* showcase my ability to design distributed architectures, event routing, real-time message broadcasting via WebSockets, and queue brokers like Redis and Celery.</li>
+                    <li><strong>Performance &amp; Typing</strong>: My *Go User API* demonstrates my interest in low-latency systems. Using GoFiber and SQLC, I achieved optimal database performance with compile-time type-safety.</li>
+                    <li><strong>AI &amp; Machine Learning</strong>: Projects like the *AEO/SEO Content Platform* and *Diabetes Risk Predictor* incorporate Scikit-learn, Random Forest models, and Natural Language Processing (NLP) pipelines.</li>
+                </ul>
+            </div>
+
+            <div class="project-filters animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="java">Java / Spring</button>
+                <button class="filter-btn" data-filter="python">Python / ML</button>
+                <button class="filter-btn" data-filter="web">Web / Full Stack</button>
+                <button class="filter-btn" data-filter="go">Go</button>
+                <button class="filter-btn" data-filter="security">Security</button>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- SmartMerchant AI Risk Engine -->
+                <div class="project-card animate-on-scroll" data-category="web java python">
+                    <div class="project-card-header">
+                        <span class="project-icon">🤖</span>
+                        <div class="project-badges">
+                            <span class="project-lang-badge lang-ts">TypeScript</span>
+                            <span class="project-lang-badge lang-python">Python</span>
+                        </div>
+                    </div>
+                    <h3>SmartMerchant AI Risk Engine</h3>
+                    <p>AI-Native Merchant Onboarding and Risk Classification Engine with real-time risk scoring, automated compliance checks, and live WebSocket notifications.</p>
+                    <div class="project-tech-list">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Celery</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">WebSockets</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/RitikPandey68/SmartMerchant-AI-Risk-Engine" class="project-link-btn github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
                 </div>
-                <div class="certificate-item">
-                    <img src="python_basic.png" alt="Python (Basic) HackerRank Certification">
-                    <h3>Python (Basic)</h3>
-                    <p>HackerRank Certification</p>
-                    <a href="https://www.hackerrank.com/certificates/93997f39d350" download class="certificate-download">Download Certificate</a>
+
+                <!-- Payment Workflow Simulator -->
+                <div class="project-card animate-on-scroll" data-category="python java">
+                    <div class="project-card-header">
+                        <span class="project-icon">💳</span>
+                        <div class="project-badges">
+                            <span class="project-lang-badge lang-python">Python</span>
+                        </div>
+                    </div>
+                    <h3>Payment Workflow Simulator</h3>
+                    <p>Transaction & Webhook Engine simulating end-to-end payment workflows with real-time event handling, retries, and distributed transaction management.</p>
+                    <div class="project-tech-list">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Webhooks</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Celery</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/RitikPandey68/payment-workflow-simulator" class="project-link-btn github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
                 </div>
-                <div class="certificate-item">
-                    <img src="problem_Solving(Basic).png" alt="Problem Solving Basic HackerRank Certification">
-                    <h3>Problem Solving Basic</h3>
-                    <p>HackerRank Certification</p>
-                    <a href="https://www.hackerrank.com/certificates/e16c5bcfc7a3" download class="certificate-download">Download Certificate</a>
+
+                <!-- AEO SEO Platform -->
+                <div class="project-card animate-on-scroll" data-category="python web">
+                    <div class="project-card-header">
+                        <span class="project-icon">📊</span>
+                        <div class="project-badges">
+                            <span class="project-lang-badge lang-python">Python</span>
+                        </div>
+                    </div>
+                    <h3>AEO & SEO Content Intelligence Platform</h3>
+                    <p>Full-stack SEO/AEO analytics platform combining traditional SEO analysis with AI-driven AEO & GEO scoring for content optimization and ranking insights.</p>
+                    <div class="project-tech-list">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">AI/ML</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/RitikPandey68/aeo-seo-content-intelligence-platform" class="project-link-btn github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
                 </div>
-                <div class="certificate-item">
-                    <img src="Problem_Solving(Intermediate).png" alt="Problem_Solving (Intermediate) HackerRank Certification">
-                    <h3>Problem_Solving (Intermediate)</h3>
-                    <p>HackerRank Certification</p>
-                    <a href="Problem_Solving(Intermediate).png" download class="certificate-download">Download Certificate</a>
+
+                <!-- Go User API -->
+                <div class="project-card animate-on-scroll" data-category="go">
+                    <div class="project-card-header">
+                        <span class="project-icon">⚡</span>
+                        <div class="project-badges">
+                            <span class="project-lang-badge lang-go">Go</span>
+                        </div>
+                    </div>
+                    <h3>Go User REST API</h3>
+                    <p>High-performance REST API built with GoFiber and PostgreSQL featuring SQLC for type-safe queries, Uber Zap structured logging, and dynamic age calculation.</p>
+                    <div class="project-tech-list">
+                        <span class="tech-tag">GoFiber</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">SQLC</span>
+                        <span class="tech-tag">Uber Zap</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">Go</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/RitikPandey68/go-user-api" class="project-link-btn github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Gokula Health -->
+                <div class="project-card animate-on-scroll" data-category="java">
+                    <div class="project-card-header">
+                        <span class="project-icon">🏥</span>
+                        <div class="project-badges">
+                            <span class="project-lang-badge lang-kotlin">Kotlin</span>
+                        </div>
+                    </div>
+                    <h3>Gokula Health App</h3>
+                    <p>Android health management application built with Kotlin, providing patient records management, appointment scheduling, and health tracking features.</p>
+                    <div class="project-tech-list">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Android</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Room DB</span>
+                        <span class="tech-tag">MVVM</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/RitikPandey68/Gokula-Health" class="project-link-btn github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Finance App -->
+                <div class="project-card animate-on-scroll" data-category="java web">
+                    <div class="project-card-header">
+                        <span class="project-icon">💰</span>
+                        <div class="project-badges">
+                            <span class="project-lang-badge lang-java">Java</span>
+                        </div>
+                    </div>
+                    <h3>Finance Tracker App</h3>
+                    <p>Personal finance management application with expense tracking, budget planning, income vs spending analytics, and category-based financial insights.</p>
+                    <div class="project-tech-list">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">JWT</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/RitikPandey68/Finance-App" class="project-link-btn github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Attendance Tracking -->
+                <div class="project-card animate-on-scroll" data-category="python">
+                    <div class="project-card-header">
+                        <span class="project-icon">📅</span>
+                        <div class="project-badges">
+                            <span class="project-lang-badge lang-python">Python</span>
+                        </div>
+                    </div>
+                    <h3>Attendance Tracking System</h3>
+                    <p>Smart attendance management system with facial recognition integration, automated reporting, real-time dashboards, and CSV/Excel export capabilities.</p>
+                    <div class="project-tech-list">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Face Recognition</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Pandas</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/RitikPandey68/Attendance-Tracking-Systems" class="project-link-btn github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Diabetes Prediction -->
+                <div class="project-card animate-on-scroll" data-category="python">
+                    <div class="project-card-header">
+                        <span class="project-icon">🩺</span>
+                        <div class="project-badges">
+                            <span class="project-lang-badge lang-ml">ML</span>
+                            <span class="project-lang-badge lang-python">Python</span>
+                        </div>
+                    </div>
+                    <h3>Diabetes Prediction System</h3>
+                    <p>Advanced machine learning system that predicts diabetes risk with 78% accuracy. Analyzes 8 key health indicators including glucose levels, BMI, and age for personalized risk assessment.</p>
+                    <div class="project-tech-list">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Random Forest</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/RitikPandey68/Diabetics-Prediction" class="project-link-btn github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- KeyLogger Tool -->
+                <div class="project-card animate-on-scroll" data-category="security python">
+                    <div class="project-card-header">
+                        <span class="project-icon">🔐</span>
+                        <div class="project-badges">
+                            <span class="project-lang-badge lang-security">Security</span>
+                            <span class="project-lang-badge lang-python">Python</span>
+                        </div>
+                    </div>
+                    <h3>KeyLogger & Device Monitor Tool</h3>
+                    <p>Educational cybersecurity tool for ethical hacking research — monitors device activity, keystrokes logging, and system diagnostics for security assessment purposes.</p>
+                    <div class="project-tech-list">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">pynput</span>
+                        <span class="tech-tag">System Monitoring</span>
+                        <span class="tech-tag">Cybersecurity</span>
+                        <span class="tech-tag">Logging</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/RitikPandey68/KeyLogger-and-device-monitor-tool" class="project-link-btn github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Portfolio -->
+                <div class="project-card animate-on-scroll" data-category="web">
+                    <div class="project-card-header">
+                        <span class="project-icon">🌐</span>
+                        <div class="project-badges">
+                            <span class="project-lang-badge lang-js">JS</span>
+                        </div>
+                    </div>
+                    <h3>Developer Portfolio Website</h3>
+                    <p>This very portfolio — a premium, fully responsive developer portfolio with glassmorphism UI, particle animations, scroll-reveal effects, and GitHub Pages deployment.</p>
+                    <div class="project-tech-list">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Vanilla JS</span>
+                        <span class="tech-tag">Canvas API</span>
+                        <span class="tech-tag">GitHub Pages</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/RitikPandey68/My_First_Portfolio" class="project-link-btn github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://ritikpandey68.github.io/My_First_Portfolio/" class="project-link-btn live" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/ritik-pandey-594716323/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/RitikPandey1" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+        <div class="footer-top">
+            <div class="footer-brand">RP&lt;/&gt;</div>
+            <div class="footer-links">
+                <a href="index.html" target="_blank" rel="noopener noreferrer">Home</a>
+                <a href="about.html" target="_blank" rel="noopener noreferrer">About</a>
+                <a href="experience.html" target="_blank" rel="noopener noreferrer">Experience</a>
+                <a href="skills.html" target="_blank" rel="noopener noreferrer">Skills</a>
+                <a href="projects.html" target="_blank" rel="noopener noreferrer">Projects</a>
+                <a href="certifications.html" target="_blank" rel="noopener noreferrer">Certs</a>
+                <a href="contact.html" target="_blank" rel="noopener noreferrer">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/ritik-pandey-sde/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/RitikPandey68" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/916203157922" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:pandeyritikkumar68@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
-        <p>&copy; 2023 Ritik Pandey. All Rights Reserved.</p>
+        <div class="footer-bottom">
+            <p>© 2026 <strong>Ritik Pandey</strong> · Java Full Stack Developer · Bengaluru, India · Crafted with ❤️ &amp; ☕</p>
+        </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" title="Back to top"><i class="fas fa-chevron-up"></i></button>
 
     <script src="portfolio.js"></script>
 </body>

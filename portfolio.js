@@ -306,6 +306,9 @@ document.querySelectorAll('.nav-link').forEach(link => {
         // Only intercept external page navigation (not anchor links)
         const href = this.getAttribute('href');
         if (href && !href.startsWith('#')) {
+            if (this.getAttribute('target') === '_blank') {
+                return; // Let browser open in a new tab normally
+            }
             e.preventDefault();
             const sectionName = this.textContent;
             const targetUrl   = href;
